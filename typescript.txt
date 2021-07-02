@@ -1,0 +1,53 @@
+Использовать онлайн TS https://www.typescriptlang.org/play, результат выполнения задания присылать в виде ссылки на https://www.typescriptlang.org/play?#code/...
+
+TASK 1
+а) создать тип, который может быть: строка, число или null
+б) создать тип, который может быть: Date или null
+в) создать тип, который может быть типом из пункта "a" или из пункта "б"
+
+TASK 2
+а) необходимо выбрать нужную конструкцию typescript для создания сущности Роль, которая может иметь значения "guest", "manager", "staff", "admin", "owner"
+
+б) создать интерфейс Адрес, описывающий адрес со следующими полями:
+- город типа строка (обязательное поле)
+- страна типа строка (обязательное поле)
+- улица типа строка
+- индекс типа число (обязательное поле)
+
+в) создать интерфейс, описывающий пользователя:
+- имя типа строка (обязательное поле)
+- возраст типа число (обязательное поле)
+- эл. почта типа строка (обязательное поле)
+- адрес типа "Адрес"
+- пол - может иметь только значения "f" или "m"
+- роль - можеть принимать значения, перечисленные в пункте "а"
+
+г) объявить переменную с типом "массив пользователей" (использовать интерфейс из пунтка "в") и заполнить массив парами соответствующих объектов
+
+TASK 3
+Есть функция, которая принимает массив объектов.
+У объектов должно быть обязательно поле "name" (но могут быть и любые другие поля).
+Нельзя использовать any. Нельзя менять IName.
+Исправить printNames так, чтобы она могла принимать любой массив объектов, но чтобы у объектов было обязательно поле "name":
+
+interface IName {
+	name: string
+}
+
+const printNames = (items: T[]) => {
+	items.forEach(item => console.log(item.name));
+}
+
+printNames([{ name: 'ook' }]);
+printNames([{ age: 2, name: 'ook' }]);
+printNames([{ lastName: 'test', name:'ook'}]);
+
+
+TASK 4
+Read Utility Types in ts https://www.typescriptlang.org/docs/handbook/utility-types.html
+Создать свой собственный утилитный тип, который может принимать два типа (или интерфейса) и объединять их.
+
+TASK 5
+Исправить ошибки согласно комментариям
+
+https://www.typescriptlang.org/play?#code/PQKgUABBCMB0EBED2EB2SAuECuBnAphAIaoCekEATPMmphAMYAWJA5oQ0qrhiRrgBoIpJNkYlGLVOwgBLVBnwAnAGZEG+CgGZ4ABSVIAbrIAmhIgCNZAG1kZSEDCjzmyEANbyTEJCogWkEwckJQhlAyUwEGAwMHlFVXVCABUAJXxcAAcuAggAbwoeIgw8AC58iGskIjMTcoCka3wSIXCQ8pIHAF8BCgCgjrIwLtjObiwlDOzufGhytKmcwgBefMLeEtxyvMrq2vKMJWxCHr7A0m2KKBclLYgAbQByACkmLkehR+RUImsTR4AuhQRiMwGMeBBJlklpR5uloTMIKsClAipttrsavg6hA1NYCK0lBEMQBbDK4IjscqPADKykMyggJiQGToE0WqH+EC63N6oPB7IRBC0cI5uWR62KZQqVSxOMOx15ZwGaygUB+ZOpr3evTVxCpVAArLq1aZqQA2XAAdhMKgAnIbcCYbSoPsDhmAgA
